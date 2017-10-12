@@ -1,14 +1,17 @@
-package kr.ac.hansung.spring.di;
+package kr.ac.hansung.spring.aop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import lombok.RequiredArgsConstructor;
+
+//@RequiredArgsConstructor
 public class PetOwner {
 	
 	@Autowired // AnimalType을 가진 Bean이 주입이됨 
 	           // ex)dog, cat이 두개있으면 모호해서 주입이 되지 않음
 			   // 구체적으로 둘중 하나를 주입시켜야 함
-	@Qualifier(value="qf_dog") // 모호한 bean을 지정 
+	@Qualifier(value="qf_cat") // 모호한 bean을 지정 
 	private AnimalType animal;
 	
 	/*
